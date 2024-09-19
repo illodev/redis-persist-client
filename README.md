@@ -26,7 +26,25 @@ This monorepo contains the following packages:
 ## Installation
 
 ```bash
+npm i @illodev/next-redis-persist-client
+```
+
+or
+
+```bash
+pnpm add @illodev/next-redis-persist-client
+```
+
+or
+
+```bash
 yarn add @illodev/next-redis-persist-client
+```
+
+or
+
+```bash
+bun add @illodev/next-redis-persist-client
 ```
 
 ## Usage
