@@ -1,53 +1,57 @@
-# Redis Persist Client
+# Redis Persist Client Monorepo
 
-Welcome to the Redis Persist Client Monorepo. This repository contains multiple packages related to Redis persistence. Focus in create async storage for TanStack Query (React Query).
+This repository contains multiple packages related to Redis persistence, focusing on creating asynchronous storage for **TanStack Query (React Query)**. The caching mechanism works both **server-side** and **client-side**, leveraging **server actions** in client environments for optimal performance and data persistence.
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Packages](#packages)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+1. [Introduction](#introduction)
+2. [Packages](#packages)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [Contributing](#contributing)
+6. [License](#license)
+
+---
 
 ## Introduction
 
-This monorepo contains the following packages:
+This monorepo provides packages aimed at leveraging Redis for async storage solutions, particularly for **React Query (TanStack Query)** persistence.
 
-- [@illodev/next-redis-persist-client](./packages/next-redis-persist-client): Redis Async Storage
+The main package included is:
+
+- **@illodev/next-redis-persist-client**: Redis Async Storage for React Query.
+
+---
 
 ## Packages
 
-| Package | Version | Description |
-| --- | --- | --- |
-| [@illodev/next-redis-persist-client](./packages/next-redis-persist-client) | [![npm](https://img.shields.io/npm/v/@illodev/next-redis-persist-client)](https://www.npmjs.com/package/@illodev/next-redis-persist-client) | Redis Async Storage |
+| Package                           | Version | Description                  |
+|------------------------------------|---------|------------------------------|
+| `@illodev/next-redis-persist-client` | npm     | Redis Async Storage           |
+
+---
 
 ## Installation
 
+You can install the package using your preferred package manager:
+
 ```bash
+# Using npm
 npm i @illodev/next-redis-persist-client
-```
 
-or
-
-```bash
+# Using pnpm
 pnpm add @illodev/next-redis-persist-client
-```
 
-or
-
-```bash
+# Using yarn
 yarn add @illodev/next-redis-persist-client
-```
 
-or
-
-```bash
+# Using bun
 bun add @illodev/next-redis-persist-client
 ```
 
 ## Usage
+
+Here’s an example of how to integrate Redis async storage with TanStack Query:
 
 ``` tsx
 import { createRedisAsyncStorage } from '@illodev/next-redis-persist-client'
@@ -72,6 +76,13 @@ const queryClient = new QueryClient({
   },
 })
 ```
+
+### Key Configuration Options
+
+  - Redis Socket Configuration:
+    - **host**: Specify the Redis server hostname (e.g., "redis").
+    - **port**: Port number where Redis is running (default: 6379).
+    - **tls**: Set to true for TLS-enabled Redis connections, otherwise false.
 
 ## Contributing
 
