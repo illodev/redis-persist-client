@@ -1,0 +1,6 @@
+{
+  "*.{js,ts,tsx,php}": [
+    "prettier --write",
+    "eslint ./packages --ext .js,.ts,.tsx"
+  ]
+}
